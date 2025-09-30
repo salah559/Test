@@ -1,34 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Novaweb</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Novaweb — Contact</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Contact Us</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><img src="assets/logo.svg" alt="Novaweb logo" class="logo-img"><span class="logo-text">Novaweb</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <h2>Get in Touch</h2>
-    <form action="#" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required><br><br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required><br><br>
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" rows="5" required></textarea><br><br>
-      <button type="submit">Send</button>
-    </form>
+
+  <main class="container" style="padding-top:120px;">
+    <section class="section contact-section">
+      <h1 class="section-title">Contact Us</h1>
+      <p class="section-lead">Tell us about your project — we usually reply within 24 hours.</p>
+
+      <div class="contact-grid">
+        <form class="contact-form" action="mailto:contact@novaweb.com" method="post" enctype="text/plain">
+          <label><input type="text" name="name" placeholder="Your name" required></label>
+          <label><input type="email" name="email" placeholder="Your email" required></label>
+          <label><textarea name="message" rows="6" placeholder="Tell us about your project" required></textarea></label>
+          <div><button class="btn btn-primary" type="submit">Send Message</button></div>
+        </form>
+
+        <div class="contact-info">
+          <h3>Office</h3>
+          <p>Algiers, Algeria</p>
+          <p>Email: <a href="mailto:contact@novaweb.com">contact@novaweb.com</a></p>
+          <p>Phone: +213 6X XXX XXXX</p>
+          <div class="map-wrap">
+            <iframe src="https://maps.google.com/maps?q=Algiers&t=&z=13&ie=UTF8&iwloc=&output=embed" style="border:0" width="100%" height="220" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer>
-    <p>&copy; 2025 Novaweb. All Rights Reserved.</p>
-  </footer>
+
+<script src="js/main.js" defer></script>
 </body>
-</html>
+                                                                                                       </html>
+                                                                                                       
