@@ -1,30 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Novaweb</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Novaweb — Projects</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Our Projects</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><img src="assets/logo.svg" alt="Novaweb logo" class="logo-img"><span class="logo-text">Novaweb</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <h2>Some of Our Work</h2>
-    <ul>
-      <li>Portfolio Website for Developers</li>
-      <li>E-commerce Platform</li>
-      <li>Business Landing Pages</li>
-    </ul>
+
+  <main class="container" style="padding-top:120px;">
+    <section class="section">
+      <h1 class="section-title">All Projects</h1>
+      <p class="section-lead">Click any project to preview.</p>
+      <div class="projects-grid">
+        <a class="project" href="images/project1.svg" data-title="Project One"><img src="images/project1.svg" alt="Project One"><div class="project-meta"><h4>Project One</h4><p>Brand site</p></div></a>
+        <a class="project" href="images/project2.svg" data-title="Project Two"><img src="images/project2.svg" alt="Project Two"><div class="project-meta"><h4>Project Two</h4><p>Web app</p></div></a>
+        <a class="project" href="images/project3.svg" data-title="Project Three"><img src="images/project3.svg" alt="Project Three"><div class="project-meta"><h4>Project Three</h4><p>eCommerce</p></div></a>
+        <a class="project" href="images/project4.svg" data-title="Project Four"><img src="images/project4.svg" alt="Project Four"><div class="project-meta"><h4>Project Four</h4><p>Landing page</p></div></a>
+        <a class="project" href="images/project5.svg" data-title="Project Five"><img src="images/project5.svg" alt="Project Five"><div class="project-meta"><h4>Project Five</h4><p>Campaign</p></div></a>
+        <a class="project" href="images/project6.svg" data-title="Project Six"><img src="images/project6.svg" alt="Project Six"><div class="project-meta"><h4>Project Six</h4><p>Portfolio</p></div></a>
+      </div>
+    </section>
   </main>
-  <footer>
-    <p>&copy; 2025 Novaweb. All Rights Reserved.</p>
-  </footer>
+
+<script src="js/main.js" defer></script>
 </body>
 </html>
