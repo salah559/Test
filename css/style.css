@@ -29,7 +29,7 @@ body{
 .site-header{position:fixed; top:0; left:0; width:100%; z-index:40; background:linear-gradient(90deg, rgba(6,6,6,0.45), rgba(6,6,6,0.15)); backdrop-filter: blur(6px);}
 .header-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0;}
 .logo{display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--accent); font-weight:700;}
-.logo-img{width:100x; height:100px;}
+.logo-img{width:80x; height:80px;}
 .nav a{color:#cfe8ff; text-decoration:none; margin-left:18px; font-weight:600;}
 .nav .cta{background:transparent; border:1px solid rgba(255,255,255,0.06); padding:8px 12px; border-radius:9px;}
 .nav-toggle{display:none; background:transparent; border:none; color:#cfe8ff; font-size:20px;}
