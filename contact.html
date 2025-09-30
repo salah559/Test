@@ -2,64 +2,48 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>نموذج اتصال جميل</title>
-<style>
-  body {
-    background: linear-gradient(180deg, #071023, #071a2a);
-    font-family: 'Tajawal', sans-serif;
-    color: #e6eef6;
-    margin: 0; padding: 2rem;
-    display: flex; justify-content: center; align-items: center; min-height: 100vh;
-  }
-  form {
-    background: rgba(255,255,255,0.05);
-    padding: 2rem;
-    border-radius: 14px;
-    max-width: 400px;
-    width: 100%;
-    box-shadow: 0 6px 18px rgba(2,6,12,0.6);
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
-  input, textarea {
-    width: 100%;
-    padding: 14px 12px;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: transparent;
-    color: #e6eef6;
-    font-size: 16px;
-    resize: vertical;
-    transition: border 0.3s ease;
-  }
-  input:focus, textarea:focus {
-    outline: none;
-    border-color: #00a3ff;
-    background: rgba(0,163,255,0.1);
-  }
-  button {
-    padding: 14px 0;
-    border-radius: 14px;
-    border: none;
-    background: linear-gradient(90deg, #00a3ff, #6c8cff);
-    color: #041022;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  button:hover {
-    background-color: #6c8cff;
-  }
-</style>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>نوفاويب — اتصل بنا</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <form action="silosalah120@gmail.com" method="post" enctype="text/plain">
-    <input type="text" name="name" placeholder="اسمك" required>
-    <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
-    <textarea name="message" rows="6" placeholder="حدثنا عن مشروعك" required></textarea>
-    <button type="submit">أرسل الرسالة</button>
-  </form>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><img src="assets/logo.png" alt="شعار نوفاويب" class="logo-img"><span class="logo-text"></span></a>
+      <nav class="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="projects.html">المشاريع</a>
+        <a href="about.html">من نحن</a>
+        <a href="contact.html" class="cta">اتصل بنا</a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle nav">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:120px;">
+    <section class="section contact-section">
+      <h1 class="section-title">تواصل معنا</h1>
+      <p class="section-lead">أخبرنا عن مشروعك — نرد عادة خلال 24 ساعة.</p>
+
+      <div class="contact-grid">
+        <form class="contact-form" action="silosalah120@gmail.com" method="post" enctype="text/plain">
+          <label><input type="text" name="name" placeholder="اسمك" required></label>
+          <label><input type="email" name="email" placeholder="بريدك الإلكتروني" required></label>
+          <label><textarea name="message" rows="6" placeholder="حدثنا عن مشروعك" required></textarea></label>
+          <div><button class="btn btn-primary" type="submit">أرسل الرسالة</button></div>
+        </form>
+
+        <div class="contact-info">
+          <h3>المكتب</h3>
+          <p>الجزائر، الجزائر</p>
+          <p>البريد الإلكتروني: <a href="mailto:silosalah278@gmail.com">silosalah120@gmail.com</a></p>
+          <p>الهاتف: +213663699433 </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<script src="js/main.js" defer></script>
 </body>
 </html>
