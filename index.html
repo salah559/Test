@@ -1,45 +1,113 @@
-```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Novaweb</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script src="main.js" defer></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Novaweb — Modern Web Studio</title>
+<meta name="description" content="Novaweb — modern, responsive web development studio" />
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="images/logo.png" alt="Novaweb Logo"/>
-      <h1>Novaweb</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><img src="assets/logo.svg" alt="Novaweb logo" class="logo-img"><span class="logo-text">Novaweb</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="cta">Contact</a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle nav">☰</button>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
-        <li><a href="about.html" data-en="About" data-ar="معلومات عنا" class="active">About</a></li>
-        <li><a href="projects.html" data-en="Projects" data-ar="المشاريع">Projects</a></li>
-        <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
-      </ul>
-    </nav>
-    <button id="lang-toggle">AR</button>
   </header>
 
-  <section class="about">
-    <h2 data-en="About Us" data-ar="معلومات عنا">About Us</h2>
-    <p data-en="We are a creative web development team delivering professional digital solutions." 
-       data-ar="نحن فريق تطوير ويب إبداعي نقدم حلولاً رقمية احترافية.">
-       We are a creative web development team delivering professional digital solutions.
-    </p>
+  <main>
+    <section class="hero">
+      <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>We build fast, beautiful websites that convert.</h1>
+          <p class="lead">Design systems, performance-first development, and attention to detail — Novaweb crafts digital experiences for growth.</p>
+          <p class="buttons">
+            <a class="btn btn-primary" href="contact.html">Get a Quote</a>
+            <a class="btn btn-ghost" href="projects.html">View Projects</a>
+          </p>
+        </div>
+        <div class="hero-card">
+          <h3>Featured</h3>
+          <p>Design + Dev for a fintech launch — 3 week MVP.</p>
+          <a href="projects.html" class="muted-link">See case study →</a>
+        </div>
+      </div>
+    </section>
 
-    <div class="team">
-      <h3 data-en="Our Team" data-ar="فريقنا">Our Team</h3>
-      <ul>
-        <li>Bouazza salahEddine</li>
-        <li>Madi Mohamed elhadi</li>
-      </ul>
+    <section class="section services container">
+      <h2 class="section-title">What we do</h2>
+      <p class="section-lead">Design and development services tailored to your business goals.</p>
+      <div class="cards-grid">
+        <article class="card">
+          <div class="icon">💻</div>
+          <h3>Web Design</h3>
+          <p>Pixel-perfect UI, component libraries, and accessible interfaces.</p>
+        </article>
+        <article class="card">
+          <div class="icon">⚙️</div>
+          <h3>Web Development</h3>
+          <p>Scalable, maintainable code, optimized for performance.</p>
+        </article>
+        <article class="card">
+          <div class="icon">🚀</div>
+          <h3>SEO & Performance</h3>
+          <p>Speed, structure, and basics to improve discoverability.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section projects container">
+      <h2 class="section-title">Selected projects</h2>
+      <p class="section-lead">A few recent launches — small teams, big results.</p>
+      <div class="projects-grid">
+        <a class="project" href="images/project1.svg" data-title="Project One"><img src="images/project1.svg" alt="Project One"><div class="project-meta"><h4>Project One</h4><p>Brand site • 2025</p></div></a>
+        <a class="project" href="images/project2.svg" data-title="Project Two"><img src="images/project2.svg" alt="Project Two"><div class="project-meta"><h4>Project Two</h4><p>Platform • 2025</p></div></a>
+        <a class="project" href="images/project3.svg" data-title="Project Three"><img src="images/project3.svg" alt="Project Three"><div class="project-meta"><h4>Project Three</h4><p>eCommerce • 2024</p></div></a>
+      </div>
+    </section>
+
+    <section class="section testimonials container">
+      <h2 class="section-title">What clients say</h2>
+      <div class="testimonial-slider" id="testimonial-slider">
+        <div class="testimonial">"Novaweb turned our messy site into a conversion machine. Fast and professional."</div>
+        <div class="testimonial">"Designers and developers who actually listen. Great communication."</div>
+        <div class="testimonial">"Delivered on time and improved our organic traffic within weeks."</div>
+      </div>
+    </section>
+
+    <section class="section cta container">
+      <div class="cta-inner">
+        <h3>Ready to start your project?</h3>
+        <a class="btn btn-primary" href="contact.html">Let's talk</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Novaweb</strong>
+        <p>Modern web development studio</p>
+      </div>
+      <div>
+        <p>Email: <a href="mailto:contact@novaweb.com">contact@novaweb.com</a></p>
+        <p>Phone: +213 6X XXX XXXX</p>
+      </div>
+      <div>
+        <p>Follow</p>
+        <p><a href="#">Twitter</a> · <a href="#">LinkedIn</a></p>
+      </div>
     </div>
-  </section>
+  </footer>
+
+<script src="js/main.js" defer></script>
 </body>
 </html>
-```

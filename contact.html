@@ -1,51 +1,51 @@
-```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Novaweb</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script src="main.js" defer></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Novaweb — Contact</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="images/logo.png" alt="Novaweb Logo"/>
-      <h1>Novaweb</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><img src="assets/logo.svg" alt="Novaweb logo" class="logo-img"><span class="logo-text">Novaweb</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
-        <li><a href="about.html" data-en="About" data-ar="معلومات عنا">About</a></li>
-        <li><a href="projects.html" data-en="Projects" data-ar="المشاريع">Projects</a></li>
-        <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا" class="active">Contact</a></li>
-      </ul>
-    </nav>
-    <button id="lang-toggle">AR</button>
   </header>
 
-  <section class="contact">
-    <h2 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h2>
+  <main class="container" style="padding-top:120px;">
+    <section class="section contact-section">
+      <h1 class="section-title">Contact Us</h1>
+      <p class="section-lead">Tell us about your project — we usually reply within 24 hours.</p>
 
-    <div class="contact-info">
-      <p>Email: <a href="mailto:bouazzasalah120120@gmail.com">bouazzasalah120120@gmail.com</a></p>
-      <p>Phone: +213663699433</p>
-    </div>
+      <div class="contact-grid">
+        <form class="contact-form" action="mailto:contact@novaweb.com" method="post" enctype="text/plain">
+          <label><input type="text" name="name" placeholder="Your name" required></label>
+          <label><input type="email" name="email" placeholder="Your email" required></label>
+          <label><textarea name="message" rows="6" placeholder="Tell us about your project" required></textarea></label>
+          <div><button class="btn btn-primary" type="submit">Send Message</button></div>
+        </form>
 
-    <form action="mailto:bouazzasalah120120@gmail.com" method="post" enctype="text/plain">
-      <label for="name" data-en="Name:" data-ar="الاسم:">Name:</label>
-      <input type="text" id="name" name="name" required/>
+        <div class="contact-info">
+          <h3>Office</h3>
+          <p>Algiers, Algeria</p>
+          <p>Email: <a href="mailto:contact@novaweb.com">contact@novaweb.com</a></p>
+          <p>Phone: +213 6X XXX XXXX</p>
+          <div class="map-wrap">
+            <iframe src="https://maps.google.com/maps?q=Algiers&t=&z=13&ie=UTF8&iwloc=&output=embed" style="border:0" width="100%" height="220" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-      <label for="email" data-en="Email:" data-ar="البريد الإلكتروني:">Email:</label>
-      <input type="email" id="email" name="email" required/>
-
-      <label for="message" data-en="Message:" data-ar="الرسالة:">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit" data-en="Send" data-ar="إرسال">Send</button>
-    </form>
-  </section>
+<script src="js/main.js" defer></script>
 </body>
 </html>
-```
