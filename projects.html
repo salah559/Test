@@ -1,40 +1,61 @@
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Novaweb — Projects</title>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Novaweb</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="main.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html"><img src="assets/logo.svg" alt="Novaweb logo" class="logo-img"><span class="logo-text">Novaweb</span></a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="cta">Contact</a>
-      </nav>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Novaweb Logo"/>
+      <h1>Novaweb</h1>
     </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+        <li><a href="about.html" data-en="About" data-ar="معلومات عنا">About</a></li>
+        <li><a href="projects.html" data-en="Projects" data-ar="المشاريع" class="active">Projects</a></li>
+        <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="lang-toggle">AR</button>
   </header>
 
-  <main class="container" style="padding-top:120px;">
-    <section class="section">
-      <h1 class="section-title">All Projects</h1>
-      <p class="section-lead">Click any project to preview.</p>
-      <div class="projects-grid">
-        <a class="project" href="images/project1.svg" data-title="Project One"><img src="images/project1.svg" alt="Project One"><div class="project-meta"><h4>Project One</h4><p>Brand site</p></div></a>
-        <a class="project" href="images/project2.svg" data-title="Project Two"><img src="images/project2.svg" alt="Project Two"><div class="project-meta"><h4>Project Two</h4><p>Web app</p></div></a>
-        <a class="project" href="images/project3.svg" data-title="Project Three"><img src="images/project3.svg" alt="Project Three"><div class="project-meta"><h4>Project Three</h4><p>eCommerce</p></div></a>
-        <a class="project" href="images/project4.svg" data-title="Project Four"><img src="images/project4.svg" alt="Project Four"><div class="project-meta"><h4>Project Four</h4><p>Landing page</p></div></a>
-        <a class="project" href="images/project5.svg" data-title="Project Five"><img src="images/project5.svg" alt="Project Five"><div class="project-meta"><h4>Project Five</h4><p>Campaign</p></div></a>
-        <a class="project" href="images/project6.svg" data-title="Project Six"><img src="images/project6.svg" alt="Project Six"><div class="project-meta"><h4>Project Six</h4><p>Portfolio</p></div></a>
+  <section class="projects">
+    <h2 data-en="Our Projects" data-ar="مشاريعنا">Our Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="images/projects/project1.jpg" alt="Project 1"/>
+        <h3 data-en="E-commerce Website" data-ar="موقع تجارة إلكترونية">E-commerce Website</h3>
+        <p data-en="A modern online store with secure payment system."
+           data-ar="متجر إلكتروني عصري مع نظام دفع آمن.">
+           A modern online store with secure payment system.
+        </p>
       </div>
-    </section>
-  </main>
 
-<script src="js/main.js" defer></script>
+      <div class="project-card">
+        <img src="images/projects/project2.jpg" alt="Project 2"/>
+        <h3 data-en="Portfolio Website" data-ar="موقع بورتفوليو">Portfolio Website</h3>
+        <p data-en="A professional portfolio to showcase client work."
+           data-ar="بورتفوليو احترافي لعرض أعمال العميل.">
+           A professional portfolio to showcase client work.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <img src="images/projects/project3.jpg" alt="Project 3"/>
+        <h3 data-en="Business Website" data-ar="موقع أعمال">Business Website</h3>
+        <p data-en="Corporate website with modern and responsive design."
+           data-ar="موقع أعمال بتصميم عصري ومتجاوب.">
+           Corporate website with modern and responsive design.
+        </p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
+```
