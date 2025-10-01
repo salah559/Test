@@ -246,40 +246,122 @@ body {
 }
 
 /* Contact Form */
+.contact-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
 .contact-grid {
   display: flex;
-  flex-direction: column; /* عمودي */
-  align-items: center;
-  margin-top: 60px; /* المسافة من الأعلى */
-  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 
-/* الأنيميشن */
-@keyframes slideUpFade {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Contact Form */
 .contact-form {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 30px;
   width: 100%;
-  max-width: 420px;
-  background: var(--card);
-  padding: 25px 30px;
-  border-radius: var(--radius);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  max-width: 450px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
 
-  /* حركة عند ظهور الفورم */
+  /* Animation */
+  opacity: 0;
+  transform: translateY(40px);
   animation: slideUpFade 0.8s ease-out forwards;
 }
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #cfe8ff;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: #e6eef6;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #00a3ff;
+  box-shadow: 0 0 10px rgba(0,163,255,0.4);
+}
+
+.contact-form button {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg,#00a3ff,#6c8cff);
+  color: #041022;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,163,255,0.3);
+}
+
+/* Contact Info Card */
+.contact-info {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 300px;
+  color: #cfe8ff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUpFade 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.contact-info a {
+  color: #00a3ff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Animation Keyframes */
+@keyframes slideUpFade {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-info {
+    text-align: center;
+    animation-delay: 0.2s;
+  }
 /* Responsive */
 @media (max-width:900px) {
   .cards-grid, .projects-grid { grid-template-columns: repeat(2,1fr); }
