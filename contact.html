@@ -106,3 +106,27 @@
   <script src="js/main.js" defer></script>
 </body>
 </html>
+
+<div id="form-response" style="color:#00a3ff; margin-top:10px;"></div>
+
+<script>
+const form = document.querySelector('.contact-form');
+const responseDiv = document.getElementById('form-response');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const data = new FormData(form);
+  fetch(form.action, {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  }).then(res => {
+    if(res.ok){
+      responseDiv.textContent = "Message sent! Thank you.";
+      form.reset();
+    } else {
+      responseDiv.textContent = "Oops! Something went wrong.";
+    }
+  });
+});
+</script>
