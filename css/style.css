@@ -248,10 +248,24 @@ body {
 /* Contact Form */
 .contact-grid {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* عمودي */
   align-items: center;
-  padding: 60px 20px;
+  margin-top: 60px; /* المسافة من الأعلى */
+  gap: 30px;
 }
+
+/* الأنيميشن */
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .contact-form {
   width: 100%;
   max-width: 420px;
@@ -262,44 +276,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-}
-.contact-form label {
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  color: var(--muted);
-}
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 8px;
-  font-size: 14px;
-  background: rgba(255,255,255,0.04);
-  color: #e6eef6;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-}
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 8px rgba(0,163,255,0.3);
-}
-.contact-form button {
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  color: #041022;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-.contact-form button:hover {
-  transform: translateY(-2px);
-}
 
+  /* حركة عند ظهور الفورم */
+  animation: slideUpFade 0.8s ease-out forwards;
+}
 /* Responsive */
 @media (max-width:900px) {
   .cards-grid, .projects-grid { grid-template-columns: repeat(2,1fr); }
