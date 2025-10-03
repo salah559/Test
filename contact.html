@@ -1,133 +1,20 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Novaweb — Contact</title>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <script src="lang-switcher.js" defer></script>
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">
-        <img src="assets/logo.png" alt="Novaweb logo" class="logo-img">
-        <span class="logo-text"></span>
-      </a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="cta">Contact</a>
-        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle nav">☰</button>
-      </nav>
-    </div>
+  <header>
+    <h1 data-translate="contact">Contact Us</h1>
+    <select id="languageSwitcher">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="fr">Français</option>
+    </select>
   </header>
-
-  <!-- Main -->
-  <main class="container" style="padding-top:120px;">
-    <section class="section contact-section">
-      <h1 class="section-title">Contact Us</h1>
-      <p class="section-lead">Tell us about your project — we usually reply within 24 hours.</p>
-
-      <!-- Contact Grid -->
-      <div class="contact-grid">
-        
-        <<!-- Contact Form -->
-<form class="contact-form" action="https://formspree.io/f/xldpnrap" method="POST">
-  
-  <!-- Hidden inputs for subject and redirect after send -->
-  <input type="hidden" name="_subject" value="New message from your website">
-  <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you">
-
-  <label>
-    <span>Your Name</span>
-    <input type="text" name="name" placeholder="Enter your name" required>
-  </label>
-
-  <label>
-    <span>Your Email</span>
-    <input type="email" name="email" placeholder="Enter your email" required>
-  </label>
-
-  <label>
-    <span>Message</span>
-    <textarea name="message" rows="6" placeholder="Tell us about your project" required></textarea>
-  </label>
-
-  <button class="btn btn-primary" type="submit">Send Message</button>
-
-  <!-- Response message -->
-  <div id="form-response" style="color:#00a3ff; margin-top:10px;"></div>
-
-</form>
-
-<script>
-  const form = document.querySelector('.contact-form');
-  const responseDiv = document.getElementById('form-response');
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const data = new FormData(form);
-    fetch(form.action, {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(res => {
-      if (res.ok) {
-        responseDiv.textContent = "Message sent! Thank you.";
-        form.reset();
-      } else {
-        responseDiv.textContent = "Oops! Something went wrong.";
-      }
-    })
-    .catch(() => {
-      responseDiv.textContent = "Oops! Something went wrong.";
-    });
-  });
-</script>
-
-        <!-- Contact Info -->
-        <div class="contact-info">
-          <h3>our contacts</h3>
-          <p>Algiers, Algeria</p>
-          <p>Email: 
-            <a href="mailto: novawebdv@gmail.com">novawebdv@gmail.com</a>
-          </p>
-          <p>Phone: +213 663 699 433</p>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <script src="js/main.js" defer></script>
-<script src="/lang-switcher.js"></script>
+  <p data-translate="contact_text">This is the contact page.</p>
 </body>
 </html>
-
-<div id="form-response" style="color:#00a3ff; margin-top:10px;"></div>
-
-<script>
-const form = document.querySelector('.contact-form');
-const responseDiv = document.getElementById('form-response');
-
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  const data = new FormData(form);
-  fetch(form.action, {
-    method: 'POST',
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  }).then(res => {
-    if(res.ok){
-      responseDiv.textContent = "Message sent! Thank you.";
-      form.reset();
-    } else {
-      responseDiv.textContent = "Oops! Something went wrong.";
-    }
-  });
-});
-</script>
