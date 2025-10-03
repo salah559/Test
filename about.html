@@ -1,20 +1,43 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About</title>
-  <script src="lang-switcher.js" defer></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Novaweb — About</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1 data-translate="about">About Us</h1>
-    <select id="languageSwitcher">
-      <option value="en">English</option>
-      <option value="ar">العربية</option>
-      <option value="fr">Français</option>
-    </select>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><img src="assets/logo.png" alt="Novaweb logo" class="logo-img"><span class="logo-text"></span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="cta">Contact</a>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle nav">☰</button>
+      </nav>
+    </div>
   </header>
-  <p data-translate="about_text">This is the about page.</p>
+
+  <main class="container" style="padding-top:20px;">
+    <section class="section">
+      <h1 class="section-title">About Novaweb</h1>
+      <p class="section-lead">We are a small team of designers and developers focused on building quality websites for startups and growing businesses.</p>
+      <div class="team-grid">
+        <div class="team-member"> 
+          <h4>Bouazza salahEddine</h4>
+          <p>Founder &amp; Lead Developer</p>
+        </div>
+        <div class="team-member">
+          <h4>madi Mohamed elhadi</h4>
+          <p>Product Designer</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<script src="js/main.js" defer></script>
 </body>
 </html>
