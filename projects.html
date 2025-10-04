@@ -12,10 +12,19 @@
     <div class="container header-inner">
       <a class="logo" href="index.html"><img src="assets/logo.png" alt="Novaweb logo" class="logo-img"><span class="logo-text"></span></a>
       <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="cta">Contact</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="contact.html" class="cta" data-i18n="nav.contact">Contact</a>
+        <div class="lang-selector">
+          <button id="lang-toggle" class="lang-toggle">English</button>
+          <div class="lang-dropdown">
+            <div class="lang-option" data-lang="en">English</div>
+            <div class="lang-option" data-lang="ar">عربي</div>
+            <div class="lang-option" data-lang="fr">Français</div>
+            <div class="lang-option" data-lang="es">Español</div>
+          </div>
+        </div>
         <button id="nav-toggle" class="nav-toggle" aria-label="Toggle nav">☰</button>
       </nav>
     </div>
@@ -23,17 +32,42 @@
 
   <main class="container" style="padding-top:120px;">
     <section class="section">
-      <h1 class="section-title">All Projects</h1>
-      <p class="section-lead">Click any project to preview.</p>
+      <h1 class="section-title" data-i18n="projects.all.title">All Projects</h1>
+      <p class="section-lead" data-i18n="projects.all.subtitle">Click any project to visit.</p>
       <div class="projects-grid">
-        <a class="project" href="images/project1.jpg" data-title="Project One"><img src="images/project1.jpg" alt="Project One"><div class="project-meta"><h4>Project One</h4><p>Brand site</p></div></a>
-        <a class="project" href="images/project2.jpg" data-title="Project Two"><img src="images/project2.jpg" alt="Project Two"><div class="project-meta"><h4>Project Two</h4><p>Web app</p></div></a>
-        <a class="project" href="images/project3.jpg" data-title="Project Three"><img src="images/project3.jpg" alt="Project Three"><div class="project-meta"><h4>Project Three</h4><p>eCommerce</p></div></a>
-        <a class="project" href="images/project4.jpg" data-title="Project Four"><img src="images/project4.jpg" alt="Project Four"><div class="project-meta"><h4>Project Four</h4><p>Landing page</p></div></a>
+        <a class="project" href="https://example.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/project1.jpg" alt="Project One">
+          <div class="project-meta">
+            <h4 data-i18n="project1.title">Project One</h4>
+            <p data-i18n="project1.desc">Brand site • 2025</p>
+          </div>
+        </a>
+        <a class="project" href="https://example.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/project2.jpg" alt="Project Two">
+          <div class="project-meta">
+            <h4 data-i18n="project2.title">Project Two</h4>
+            <p data-i18n="project2.desc">Platform • 2025</p>
+          </div>
+        </a>
+        <a class="project" href="https://example.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/project3.jpg" alt="Project Three">
+          <div class="project-meta">
+            <h4 data-i18n="project3.title">Project Three</h4>
+            <p data-i18n="project3.desc">eCommerce • 2024</p>
+          </div>
+        </a>
+        <a class="project" href="https://example.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/project4.jpg" alt="Project Four">
+          <div class="project-meta">
+            <h4 data-i18n="project4.title">Project Four</h4>
+            <p data-i18n="project4.desc">Landing page</p>
+          </div>
+        </a>
       </div>
     </section>
   </main>
 
+<script src="js/translations.js"></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>

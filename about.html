@@ -12,32 +12,42 @@
     <div class="container header-inner">
       <a class="logo" href="index.html"><img src="assets/logo.png" alt="Novaweb logo" class="logo-img"><span class="logo-text"></span></a>
       <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="cta">Contact</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="contact.html" class="cta" data-i18n="nav.contact">Contact</a>
+        <div class="lang-selector">
+          <button id="lang-toggle" class="lang-toggle">English</button>
+          <div class="lang-dropdown">
+            <div class="lang-option" data-lang="en">English</div>
+            <div class="lang-option" data-lang="ar">عربي</div>
+            <div class="lang-option" data-lang="fr">Français</div>
+            <div class="lang-option" data-lang="es">Español</div>
+          </div>
+        </div>
         <button id="nav-toggle" class="nav-toggle" aria-label="Toggle nav">☰</button>
       </nav>
     </div>
   </header>
 
-  <main class="container" style="padding-top:20px;">
+  <main class="container" style="padding-top:120px;">
     <section class="section">
-      <h1 class="section-title">About Novaweb</h1>
-      <p class="section-lead">We are a small team of designers and developers focused on building quality websites for startups and growing businesses.</p>
+      <h1 class="section-title" data-i18n="about.title">About Novaweb</h1>
+      <p class="section-lead" data-i18n="about.subtitle">We are a small team of designers and developers focused on building quality websites for startups and growing businesses.</p>
       <div class="team-grid">
         <div class="team-member"> 
-          <h4>Bouazza salahEddine</h4>
-          <p>Founder &amp; Lead Developer</p>
+          <h4 data-i18n="about.member1.name">Bouazza salahEddine</h4>
+          <p data-i18n="about.member1.role">Founder &amp; Lead Developer</p>
         </div>
         <div class="team-member">
-          <h4>madi Mohamed elhadi</h4>
-          <p>Product Designer</p>
+          <h4 data-i18n="about.member2.name">madi Mohamed elhadi</h4>
+          <p data-i18n="about.member2.role">Product Designer</p>
         </div>
       </div>
     </section>
   </main>
 
+<script src="js/translations.js"></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>
