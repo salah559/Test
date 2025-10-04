@@ -128,12 +128,42 @@
     }, 4000);
   }());
 
-  // nav toggle for small screens
-  document.getElementById('nav-toggle')?.addEventListener('click', ()=>{
-    const navLinks = document.querySelectorAll('.nav a');
-    navLinks.forEach(a => {
-      a.style.display = a.style.display === 'inline-block' ? 'none' : 'inline-block';
-    });
+  // Mobile navigation toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+  const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+  
+  function toggleMobileNav() {
+    const isActive = mobileNav?.classList.toggle('active');
+    navToggle?.classList.toggle('active');
+    mobileOverlay?.classList.toggle('active');
+    document.body.style.overflow = isActive ? 'hidden' : '';
+    navToggle?.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+    mobileOverlay?.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+  }
+  
+  function closeMobileNav() {
+    navToggle?.classList.remove('active');
+    mobileNav?.classList.remove('active');
+    mobileOverlay?.classList.remove('active');
+    document.body.style.overflow = '';
+    navToggle?.setAttribute('aria-expanded', 'false');
+    mobileOverlay?.setAttribute('aria-hidden', 'true');
+  }
+  
+  navToggle?.addEventListener('click', toggleMobileNav);
+  mobileOverlay?.addEventListener('click', closeMobileNav);
+  
+  // Close mobile nav when clicking a link
+  document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', closeMobileNav);
+  });
+  
+  // Close on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileNav?.classList.contains('active')) {
+      closeMobileNav();
+    }
   });
 
   // Enhanced project hover effect
