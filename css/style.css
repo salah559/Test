@@ -835,6 +835,99 @@ body {
   flex-wrap: wrap;
 }
 
+/* Social Links */
+.social-links {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.social-links h4 {
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: var(--transition);
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.social-btn:hover::before {
+  opacity: 1;
+}
+
+.social-btn svg {
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.facebook-btn {
+  background: linear-gradient(135deg, #1877f2, #0c63d4);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+}
+
+.facebook-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(24, 119, 242, 0.5);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.instagram-btn {
+  background: linear-gradient(135deg, #e1306c, #c13584, #833ab4, #5851db);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(225, 48, 108, 0.3);
+}
+
+.instagram-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(225, 48, 108, 0.5);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
 /* Contact Form */
 .contact-form {
   background: rgba(255,255,255,0.05);
