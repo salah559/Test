@@ -56,7 +56,19 @@ The site runs on a simple Python HTTP server on port 5000:
 - **Port**: 5000
 - The site is ready to be published via Replit's deployment
 
-## Recent Changes (Oct 4, 2025)
+## Recent Changes
+
+### Project Portfolio Update (Oct 19, 2025)
+- Updated project portfolio to feature 3 real demo websites:
+  1. **Nova Restaurant** (https://salah559.github.io/Nova-restaurants/) - Restaurant website demo
+  2. **Enova** (https://enova-tau.vercel.app/) - E-commerce store demo
+  3. **Sweet** (https://snaky666.github.io/sweet-/#products) - Candy shop demo
+- Replaced project images with professional stock photos
+- Updated all translations (AR, EN, FR, ES) to indicate these are demo sites
+- Added messaging that clients receive more professional sites with custom domain and professional hosting
+- Updated both index.html and projects.html with new project information
+
+### Oct 4, 2025
 ### Initial Setup
 - Fixed CSS syntax error (missing closing brace in media query)
 - Removed duplicate code in contact.html
