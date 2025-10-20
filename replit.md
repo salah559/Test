@@ -60,9 +60,13 @@ The site runs on a simple Python HTTP server on port 5000:
 
 ### Team Information Update (Oct 20, 2025)
 - Corrected team member name from "مادي" to "ماضي" (Madi Mohamed elhadi)
-- Updated both team members' roles to "Web Developer" in all 4 languages (AR, EN, FR, ES)
+- Updated both team members' roles to "Web Developer & Designer" in all 4 languages
+  - Arabic: مطور ومصمم مواقع
+  - English: Web Developer & Designer
+  - French: Développeur et Designer Web
+  - Spanish: Desarrollador y Diseñador Web
 - Removed previous role distinctions (Founder & Lead Developer, Product Designer)
-- Both team members now have equal "Web Developer" designation
+- Both team members now have equal designation combining development and design skills
 
 ### Comprehensive Website Improvements (Oct 20, 2025)
 Applied comprehensive improvements across performance, SEO, accessibility, and UX:
