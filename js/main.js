@@ -260,7 +260,7 @@
     });
   }
 
-  // Loading Screen
+  // Loading Screen - Optimized for faster display
   const loadingScreen = document.getElementById('loading-screen');
   if (loadingScreen) {
     window.addEventListener('load', () => {
@@ -268,8 +268,8 @@
         loadingScreen.classList.add('hidden');
         setTimeout(() => {
           loadingScreen.style.display = 'none';
-        }, 500);
-      }, 800);
+        }, 400);
+      }, 300);
     });
   }
 
