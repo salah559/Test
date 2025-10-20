@@ -59,12 +59,14 @@ The site runs on a simple Python HTTP server on port 5000:
 ## Recent Changes
 
 ### UI/UX Improvements (Oct 20, 2025)
-- Fixed floating buttons positioning to prevent content overlap
-  - Moved WhatsApp button to bottom-left corner
-  - Moved Back-to-Top button to bottom-right corner
-  - Reduced z-index from 999 to 40 for both buttons
-  - Both buttons now at same height (30px from bottom)
-- Improved accessibility and user experience
+- Redesigned WhatsApp floating button
+  - Changed from green to transparent blue with glass effect
+  - Background: rgba(0, 212, 255, 0.15) with backdrop-filter blur
+  - Border: 2px solid rgba(0, 212, 255, 0.3)
+  - Positioned at bottom-right corner
+  - Blue glow animation with hover effects
+- Removed back-to-top button to reduce UI clutter
+- Improved overall user experience with cleaner interface
 
 ### Team Information Update (Oct 20, 2025)
 - Corrected team member name from "مادي" to "ماضي" (Madi Mohamed elhadi)
