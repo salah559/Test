@@ -58,6 +58,12 @@ The site runs on a simple Python HTTP server on port 5000:
 
 ## Recent Changes
 
+### Team Information Update (Oct 20, 2025)
+- Corrected team member name from "مادي" to "ماضي" (Madi Mohamed elhadi)
+- Updated both team members' roles to "Web Developer" in all 4 languages (AR, EN, FR, ES)
+- Removed previous role distinctions (Founder & Lead Developer, Product Designer)
+- Both team members now have equal "Web Developer" designation
+
 ### Comprehensive Website Improvements (Oct 20, 2025)
 Applied comprehensive improvements across performance, SEO, accessibility, and UX:
 
