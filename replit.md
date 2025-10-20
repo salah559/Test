@@ -58,6 +58,14 @@ The site runs on a simple Python HTTP server on port 5000:
 
 ## Recent Changes
 
+### UI/UX Improvements (Oct 20, 2025)
+- Fixed floating buttons positioning to prevent content overlap
+  - Moved WhatsApp button to bottom-left corner
+  - Moved Back-to-Top button to bottom-right corner
+  - Reduced z-index from 999 to 40 for both buttons
+  - Both buttons now at same height (30px from bottom)
+- Improved accessibility and user experience
+
 ### Team Information Update (Oct 20, 2025)
 - Corrected team member name from "مادي" to "ماضي" (Madi Mohamed elhadi)
 - Updated both team members' roles to "Web Developer & Designer" in all 4 languages
