@@ -58,6 +58,54 @@ The site runs on a simple Python HTTP server on port 5000:
 
 ## Recent Changes
 
+### Comprehensive Website Improvements (Oct 20, 2025)
+Applied comprehensive improvements across performance, SEO, accessibility, and UX:
+
+**Performance Optimizations:**
+- Added `preconnect` for Google Fonts to reduce DNS lookup time
+- Font files already use `display=swap` for optimal loading
+- Added explicit width and height attributes to images for better CLS
+- Improved alt text for all images with descriptive content
+- Optimized loading screen to appear for only 300ms instead of 800ms
+
+**SEO Enhancements:**
+- Added canonical URLs to all pages
+- Implemented hreflang tags for all 4 supported languages (EN, AR, FR, ES)
+- Added comprehensive Open Graph and Twitter Card meta tags per page
+- Implemented Schema.org structured data (Organization type) on homepage
+- Better meta descriptions and titles for each page
+
+**Accessibility Improvements:**
+- Added "Skip to Content" link on all pages for keyboard navigation
+- Improved ARIA attributes throughout (aria-haspopup, aria-expanded, etc.)
+- Language selector now supports full keyboard navigation (Arrow keys, Enter, Escape)
+- Mobile navigation updates ARIA states correctly
+- Better RTL support - now sets `dir` attribute on HTML element
+- All language options changed from divs to proper buttons with role="menuitem"
+- Improved focus states for all interactive elements
+
+**UX Improvements:**
+- Created professional thank-you.html page with animations
+- Updated contact form to redirect to local thank-you page
+- Faster loading screen (300ms vs 800ms)
+- Optimized WhatsApp floating button with:
+  - Smoother pulse animation (3s instead of 2s)
+  - Better mobile responsiveness (smaller on mobile screens)
+  - Improved focus states
+  - Animation pauses on hover
+
+**Code Quality:**
+- Removed duplicate translations.js file from root directory
+- Added CSS custom properties for breakpoints (--breakpoint-mobile, --breakpoint-tablet)
+- Added skip-to-content styling with proper focus states
+- Improved JavaScript organization with helper functions for dropdown management
+- Better keyboard support with Escape key to close dropdowns
+
+**Mobile Optimizations:**
+- All buttons meet minimum touch target size (44x44px minimum)
+- WhatsApp button sized appropriately for mobile (56px on small screens)
+- Existing mobile-responsive design already excellent
+
 ### Project Portfolio Update (Oct 19, 2025)
 - Updated project portfolio to feature 3 real demo websites:
   1. **Nova Restaurant** (https://salah559.github.io/Nova-restaurants/) - Restaurant website demo
