@@ -1,31 +1,55 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Novaweb — About Us | من نحن</title>
 <meta name="description" content="تعرف على فريق Novaweb. مطورون ومصممون محترفون في الجزائر. Meet our team of professional developers and designers." />
+<link rel="canonical" href="https://novaweb.com/about.html">
+<link rel="alternate" hreflang="en" href="https://novaweb.com/about.html?lang=en">
+<link rel="alternate" hreflang="ar" href="https://novaweb.com/about.html?lang=ar">
+<link rel="alternate" hreflang="fr" href="https://novaweb.com/about.html?lang=fr">
+<link rel="alternate" hreflang="es" href="https://novaweb.com/about.html?lang=es">
+<link rel="alternate" hreflang="x-default" href="https://novaweb.com/about.html">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon.png">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://novaweb.com/about.html">
+<meta property="og:title" content="About Novaweb — Our Team">
+<meta property="og:description" content="Meet our team of professional web developers and designers in Algeria.">
+<meta property="og:image" content="https://novaweb.com/assets/logo.png">
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://novaweb.com/about.html">
+<meta property="twitter:title" content="About Novaweb">
+<meta property="twitter:description" content="Meet our team of professional web developers and designers.">
+<meta property="twitter:image" content="https://novaweb.com/assets/logo.png">
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+  
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="index.html"><img src="assets/logo.png" alt="Novaweb logo" class="logo-img"><span class="logo-text"></span></a>
+      <a class="logo" href="index.html"><img src="assets/logo.png" alt="Novaweb - Modern Web Development Studio in Algeria" class="logo-img" width="150" height="40"><span class="logo-text"></span></a>
       <nav class="nav">
         <a href="index.html" data-i18n="nav.home">Home</a>
         <a href="projects.html" data-i18n="nav.projects">Projects</a>
         <a href="about.html" data-i18n="nav.about">About</a>
         <a href="contact.html" class="cta" data-i18n="nav.contact">Contact</a>
         <div class="lang-selector">
-          <button id="lang-toggle" class="lang-toggle">English</button>
-          <div class="lang-dropdown">
-            <div class="lang-option" data-lang="en">English</div>
-            <div class="lang-option" data-lang="ar">عربي</div>
-            <div class="lang-option" data-lang="fr">Français</div>
-            <div class="lang-option" data-lang="es">Español</div>
+          <button id="lang-toggle" class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select language">English</button>
+          <div class="lang-dropdown" role="menu" aria-label="Language options">
+            <button class="lang-option" role="menuitem" data-lang="en">English</button>
+            <button class="lang-option" role="menuitem" data-lang="ar">عربي</button>
+            <button class="lang-option" role="menuitem" data-lang="fr">Français</button>
+            <button class="lang-option" role="menuitem" data-lang="es">Español</button>
           </div>
         </div>
         <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">☰</button>
@@ -42,7 +66,7 @@
     <a href="contact.html" class="cta" data-i18n="nav.contact">Contact</a>
   </nav>
 
-  <main class="container" style="padding-top:120px;">
+  <main id="main-content" class="container" style="padding-top:120px;">
     <section class="section">
       <h1 class="section-title" data-i18n="about.title">About Novaweb</h1>
       <p class="section-lead" data-i18n="about.subtitle">We are a small team of designers and developers focused on building quality websites for startups and growing businesses.</p>

@@ -60,6 +60,9 @@ const translations = {
     'contact.social.whatsapp': 'واتساب',
     'contact.response.success': 'تم إرسال الرسالة! شكراً لك.',
     'contact.response.error': 'عذراً! حدث خطأ ما.',
+    'thankyou.title': 'شكراً لك!',
+    'thankyou.message': 'لقد استلمنا رسالتك وسنرد عليك خلال 24 ساعة. فريقنا متحمس للتعرف على مشروعك!',
+    'thankyou.home': 'العودة للرئيسية',
     'footer.tagline': 'استوديو تطوير مواقع حديث',
     'footer.follow': 'تابعنا'
   },
@@ -124,6 +127,9 @@ const translations = {
     'contact.social.whatsapp': 'WhatsApp',
     'contact.response.success': 'Message sent! Thank you.',
     'contact.response.error': 'Oops! Something went wrong.',
+    'thankyou.title': 'Thank You!',
+    'thankyou.message': 'We\'ve received your message and will get back to you within 24 hours. Our team is excited to learn more about your project!',
+    'thankyou.home': 'Back to Home',
     'footer.tagline': 'Modern web development studio',
     'footer.follow': 'Follow'
   },
@@ -188,6 +194,9 @@ const translations = {
     'contact.social.whatsapp': 'WhatsApp',
     'contact.response.success': 'Message envoyé ! Merci.',
     'contact.response.error': 'Oups ! Quelque chose s\'est mal passé.',
+    'thankyou.title': 'Merci !',
+    'thankyou.message': 'Nous avons bien reçu votre message et vous répondrons dans les 24 heures. Notre équipe est impatiente d\'en savoir plus sur votre projet !',
+    'thankyou.home': 'Retour à l\'accueil',
     'footer.tagline': 'Studio de développement web moderne',
     'footer.follow': 'Suivez-nous'
   },
@@ -252,6 +261,9 @@ const translations = {
     'contact.social.whatsapp': 'WhatsApp',
     'contact.response.success': '¡Mensaje enviado! Gracias.',
     'contact.response.error': '¡Ups! Algo salió mal.',
+    'thankyou.title': '¡Gracias!',
+    'thankyou.message': 'Hemos recibido tu mensaje y te responderemos en 24 horas. ¡Nuestro equipo está emocionado de conocer más sobre tu proyecto!',
+    'thankyou.home': 'Volver al inicio',
     'footer.tagline': 'Estudio de desarrollo web moderno',
     'footer.follow': 'Síguenos'
   }

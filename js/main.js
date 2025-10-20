@@ -9,9 +9,11 @@
     document.documentElement.lang = lang;
     
     if (lang === 'ar') {
+      document.documentElement.dir = 'rtl';
       document.body.style.direction = 'rtl';
       document.body.style.textAlign = 'right';
     } else {
+      document.documentElement.dir = 'ltr';
       document.body.style.direction = 'ltr';
       document.body.style.textAlign = 'left';
     }
@@ -35,30 +37,85 @@
       langToggle.textContent = languageNames[lang];
     }
     
-    const dropdown = document.querySelector('.lang-dropdown');
-    if (dropdown) dropdown.classList.remove('active');
+    closeLangDropdown();
   }
   
-  // Language dropdown toggle
-  document.getElementById('lang-toggle')?.addEventListener('click', () => {
+  function closeLangDropdown() {
     const dropdown = document.querySelector('.lang-dropdown');
-    dropdown?.classList.toggle('active');
-  });
+    const langToggle = document.getElementById('lang-toggle');
+    if (dropdown) dropdown.classList.remove('active');
+    if (langToggle) langToggle.setAttribute('aria-expanded', 'false');
+  }
   
-  // Language selection
-  document.querySelectorAll('.lang-option').forEach(option => {
+  function openLangDropdown() {
+    const dropdown = document.querySelector('.lang-dropdown');
+    const langToggle = document.getElementById('lang-toggle');
+    if (dropdown) dropdown.classList.add('active');
+    if (langToggle) langToggle.setAttribute('aria-expanded', 'true');
+  }
+  
+  // Language dropdown toggle with keyboard support
+  const langToggle = document.getElementById('lang-toggle');
+  const dropdown = document.querySelector('.lang-dropdown');
+  
+  if (langToggle && dropdown) {
+    langToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = langToggle.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        closeLangDropdown();
+      } else {
+        openLangDropdown();
+        dropdown.querySelector('.lang-option')?.focus();
+      }
+    });
+    
+    langToggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        langToggle.click();
+      }
+    });
+  }
+  
+  // Language selection with keyboard support
+  document.querySelectorAll('.lang-option').forEach((option, index, options) => {
     option.addEventListener('click', (e) => {
       const lang = e.target.getAttribute('data-lang');
       if (lang) setLanguage(lang);
     });
+    
+    option.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const lang = e.target.getAttribute('data-lang');
+        if (lang) setLanguage(lang);
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        closeLangDropdown();
+        langToggle?.focus();
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        const next = options[index + 1] || options[0];
+        next.focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prev = options[index - 1] || options[options.length - 1];
+        prev.focus();
+      }
+    });
   });
   
-  // Close dropdown when clicking outside
+  // Close dropdown when clicking outside or pressing Escape
   document.addEventListener('click', (e) => {
-    const langToggle = document.getElementById('lang-toggle');
-    const dropdown = document.querySelector('.lang-dropdown');
     if (!langToggle?.contains(e.target) && !dropdown?.contains(e.target)) {
-      dropdown?.classList.remove('active');
+      closeLangDropdown();
+    }
+  });
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeLangDropdown();
     }
   });
   

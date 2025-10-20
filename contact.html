@@ -1,20 +1,44 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Novaweb — Contact Us | تواصل معنا</title>
   <meta name="description" content="تواصل مع Novaweb للحصول على عرض سعر مجاني. نرد خلال 24 ساعة. Contact us for a free quote. We reply within 24 hours." />
+  <link rel="canonical" href="https://novaweb.com/contact.html">
+  <link rel="alternate" hreflang="en" href="https://novaweb.com/contact.html?lang=en">
+  <link rel="alternate" hreflang="ar" href="https://novaweb.com/contact.html?lang=ar">
+  <link rel="alternate" hreflang="fr" href="https://novaweb.com/contact.html?lang=fr">
+  <link rel="alternate" hreflang="es" href="https://novaweb.com/contact.html?lang=es">
+  <link rel="alternate" hreflang="x-default" href="https://novaweb.com/contact.html">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/favicon.png">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://novaweb.com/contact.html">
+  <meta property="og:title" content="Contact Novaweb — Get a Free Quote">
+  <meta property="og:description" content="Contact us for a free quote. We reply within 24 hours.">
+  <meta property="og:image" content="https://novaweb.com/assets/logo.png">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://novaweb.com/contact.html">
+  <meta property="twitter:title" content="Contact Novaweb">
+  <meta property="twitter:description" content="Get a free quote. We reply within 24 hours.">
+  <meta property="twitter:image" content="https://novaweb.com/assets/logo.png">
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+  
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="index.html">
-        <img src="assets/logo.png" alt="Novaweb logo" class="logo-img">
+        <img src="assets/logo.png" alt="Novaweb - Modern Web Development Studio in Algeria" class="logo-img" width="150" height="40">
         <span class="logo-text"></span>
       </a>
       <nav class="nav">
@@ -23,12 +47,12 @@
         <a href="about.html" data-i18n="nav.about">About</a>
         <a href="contact.html" class="cta" data-i18n="nav.contact">Contact</a>
         <div class="lang-selector">
-          <button id="lang-toggle" class="lang-toggle">English</button>
-          <div class="lang-dropdown">
-            <div class="lang-option" data-lang="en">English</div>
-            <div class="lang-option" data-lang="ar">عربي</div>
-            <div class="lang-option" data-lang="fr">Français</div>
-            <div class="lang-option" data-lang="es">Español</div>
+          <button id="lang-toggle" class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select language">English</button>
+          <div class="lang-dropdown" role="menu" aria-label="Language options">
+            <button class="lang-option" role="menuitem" data-lang="en">English</button>
+            <button class="lang-option" role="menuitem" data-lang="ar">عربي</button>
+            <button class="lang-option" role="menuitem" data-lang="fr">Français</button>
+            <button class="lang-option" role="menuitem" data-lang="es">Español</button>
           </div>
         </div>
         <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">☰</button>
@@ -45,7 +69,7 @@
     <a href="contact.html" class="cta" data-i18n="nav.contact">Contact</a>
   </nav>
 
-  <main class="container" style="padding-top:120px;">
+  <main id="main-content" class="container" style="padding-top:120px;">
     <section class="section contact-section">
       <h1 class="section-title" data-i18n="contact.title">Contact Us</h1>
       <p class="section-lead" data-i18n="contact.subtitle">Tell us about your project — we usually reply within 24 hours.</p>
@@ -54,8 +78,8 @@
         
         <form class="contact-form" action="https://formspree.io/f/xldpnrap" method="POST">
   
-          <input type="hidden" name="_subject" value="New message from your website">
-          <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you">
+          <input type="hidden" name="_subject" value="New message from Novaweb Contact Form">
+          <input type="hidden" name="_next" value="thank-you.html">
 
           <label>
             <span data-i18n="contact.form.name">Your Name</span>
